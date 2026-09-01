@@ -26,7 +26,7 @@
       <uri>https://orcid.org/0000-0001-9560-6336</uri>
     </translator>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
-    <updated>2025-06-24T00:00:00+00:00</updated>
+    <updated>2026-01-10T00:00:00+00:00</updated>
   </info>
   <style-options punctuation-in-quote="true"/>
   <date form="text">
@@ -103,7 +103,6 @@
     <term name="circa" form="short">c.</term>
     <!-- CMOS 10.48 recommends "ca." for "circa" but also allows "c.", which CSL has used historically -->
     <term name="cited" form="short">cit.</term> <!-- ODA -->
-    <term name="et-al" form="short">et al.</term>
     <term name="film" form="short">flm.</term> <!-- ODA -->
     <term name="from" form="short">fr.</term>
     <term name="letter" form="short">let.</term> <!-- ODA -->
@@ -377,10 +376,6 @@
       <single>verse</single>
       <multiple>verses</multiple>
     </term>
-    <term name="version">
-      <single>version</single>
-      <multiple>versions</multiple>
-    </term>
     <term name="volume">
       <single>volume</single>
       <multiple>volumes</multiple>
@@ -492,13 +487,17 @@
       <single>v.</single>
       <multiple>vv.</multiple>
     </term>
-    <term name="version" form="short">v.</term> <!-- no plural -->
     <term name="volume" form="short">
       <single>vol.</single>
       <multiple>vols.</multiple>
     </term>
 
     <!-- SYMBOLIC LOCATOR FORMS -->
+    <term name="chapter" form="symbol">
+      <!-- caput/capita, esp. in legal works; cf. CMOS 14.196 -->
+      <single>c.</single>
+      <multiple>cc.</multiple>
+    </term>
     <term name="paragraph" form="symbol">
       <single>¶</single>
       <multiple>¶¶</multiple>
@@ -526,8 +525,8 @@
       <multiple>editions</multiple>
     </term>
     <term name="first-reference-note-number">
-      <single>reference</single>
-      <multiple>references</multiple>
+      <single>note</single>
+      <multiple>notes</multiple>
     </term>
     <term name="number">
       <single>number</single>
@@ -549,6 +548,10 @@
       <single>printing</single>
       <multiple>printings</multiple>
     </term>
+    <term name="version">
+      <single>version</single>
+      <multiple>versions</multiple>
+    </term>
 
     <!-- SHORT NUMBER VARIABLE FORMS -->
     <term name="chapter-number" form="short">
@@ -568,8 +571,8 @@
       <multiple>eds.</multiple>
     </term>
     <term name="first-reference-note-number" form="short">
-      <single>ref.</single>
-      <multiple>refs.</multiple>
+      <single>n.</single>
+      <multiple>nn.</multiple>
     </term>
     <term name="number" form="short">
       <single>no.</single>
@@ -592,11 +595,10 @@
       <single>ptg.</single>
       <multiple>ptgs.</multiple>
     </term>
+    <term name="version" form="short">v.</term> <!-- no plural -->
 
     <!-- LONG ROLE FORMS -->
-    <!-- Omitted roles:
-         author, composer, container-author, interviewer, original-author, recipient, reviewed-author
-    -->
+    <term name="author"/> <!-- generally blank -->
     <term name="chair">
       <single>chair</single>
       <multiple>chairs</multiple>
@@ -609,6 +611,8 @@
       <single>compiler</single>
       <multiple>compilers</multiple>
     </term>
+    <term name="composer"/> <!-- generally blank -->
+    <term name="container-author"/> <!-- generally blank -->
     <term name="contributor">
       <single>contributor</single>
       <multiple>contributors</multiple>
@@ -653,6 +657,7 @@
       <single>illustrator</single>
       <multiple>illustrators</multiple>
     </term>
+    <term name="interviewer"/> <!-- generally blank -->
     <term name="narrator">
       <single>narrator</single>
       <multiple>narrators</multiple>
@@ -661,6 +666,7 @@
       <single>organizer</single>
       <multiple>organizers</multiple>
     </term>
+    <term name="original-author"/> <!-- generally blank -->
     <term name="performer">
       <single>performer</single>
       <multiple>performers</multiple>
@@ -669,6 +675,8 @@
       <single>producer</single>
       <multiple>producers</multiple>
     </term>
+    <term name="recipient"/> <!-- generally blank -->
+    <term name="reviewed-author"/> <!-- generally blank -->
     <term name="script-writer">
       <single>writer</single>
       <multiple>writers</multiple>
@@ -778,7 +786,10 @@
     <term name="editortranslator" form="verb">edited &amp; translated by</term>
     <term name="editorial-director" form="verb">edited by</term>
     <term name="executive-producer" form="verb">executive produced by</term>
-    <term name="guest" form="verb">with guest</term>
+    <term form="verb" name="guest">
+      <single>with guest</single>
+      <multiple>with guests</multiple>
+    </term>
     <term name="host" form="verb">hosted by</term>
     <term name="illustrator" form="verb">illustrated by</term>
     <term name="interviewer" form="verb">interview by</term>
